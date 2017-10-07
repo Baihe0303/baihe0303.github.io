@@ -1,2 +1,3 @@
 name: Bai,it's a TEST
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
