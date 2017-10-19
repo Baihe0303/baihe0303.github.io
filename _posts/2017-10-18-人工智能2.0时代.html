@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>人工智能2.0时代</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>人工智能2.0时代</h1>
+<h1></h1>
+<h2>移动优先to人工智能优先</h2>
+<h3>人工智能的概念及意义：</h3>
+<ol>
+<li>能够表现出智能行为的硬件和软件，制造智能机器，尤其是智能计算机程序的科学和工程；</li>
+<li>通过数据组和变量的关系（线性/非线性），得到更好的预测结果；</li>
+<li>人工智能→机器学习→深度学习，将人造的以软件为基础的计算器连接在一起，组成了一个神经网络，接收输入并进行分析判断，利用大型数据集进行训练，广泛的处理能力来训练和运行神经网络。</li>
+</ol>
+<h3>今日不同往年矣：</h3>
+<p>AI研究始于上世纪五十年代，而近十年突飞猛进。<br />
+1. 算法改进：卷积神经网络（CNN），递归神经网络（RNNs）等；<br />
+2. 硬件改进：GPU等元件，削减了训练神经网络时间；<br />
+3. 数据量改进：数据的创造和可用性以指数形式增长；<br />
+4. 云服务：通过云端基础架构降低了学习的成本和难度；  
+</p>
+<h2>人工智能2.0时代序幕开启</h2>
+<h3>挑战与希望：AI2.0时代从大数据到知识</h3>
+<ul>
+<li>
+人工智能发展：逻辑启发算法→自然语言处理/统计机器学习→深度学习
+<ul>
+<li><strong>启发算法</strong>：只适合一个具体的问题，例如深蓝；</li>
+<li><strong>统计机器学习</strong>：实现人工智能的一个途径，提取模型试图统一框架，而且监督的算法执行效果更好，例如协同过滤算法，聚类算法等；</li>
+<li><strong>深度学习</strong>：实现机器学习的一种算法，例如TensorFlow等平台。</li>
+</ul>
+</li>
+<li>
+大数据人工智能：
+<ul>
+<li>
+<strong>NLP</strong>：使计算机明白人类的语言。
+<ul>
+<li>传统模式：词袋模型</li>
+<li>
+深度学习：
+<ol>
+<li>比起传统模式，能提取更多信息。例如Word2vec，很好帮助了CNN模型建立起了计算机视觉。</li>
+<li>有效的提高了机器翻译的效率，例如LSTM模型。</li>
+<li>注意力机制（Attention Mechanism）在计算机视觉图像领域的发展，以及memory networks来解决计算机所缺乏的推理能力。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<strong>多媒体</strong>
+<ul>
+<li>传统模式：hand-crafted,直接设计特征本身，其依赖数据库，需要精心设计，提取时间长</li>
+<li>深度学习：模仿人脑，例如深度神经网络（Deep neural networks），尽管如此，其也只是经过数据量的训练，而并非辨别，继承知识。故整合数据驱动，建立知识框架是未来多媒体计算的方向。</li>
+</ul>
+</li>
+<li>
+<strong>计算机视觉</strong>
+<ul>
+<li>旨在模拟人类视觉领域的计算建模，核心在于建立高低跨度的pipeline。最大的问题在于如何模拟语义结构空间。</li>
+<li>基于1988年Kitcher提出的计算理论和最近正在研习的无监督学习。</li>
+<li>最终目标在于真正了解语义，为人类提供知识服务。</li>
+</ul>
+</li>
+<li>
+<strong>将数据转化成知识</strong>
+<ul>
+<li>将无结构的数据转化成形式化的知识</li>
+<li>Cyc项目，致力于将各个领域的本体及常识知识综合地集成在一起</li>
+<li>面对非结构化的数据时有巨大挑战，通过学习构建data-driven数据库</li>
+<li>
+该数据库依然存在问题：不准确的实体识别，不可靠的关系确认。
+<ul>
+<li>NELL（never ending language learning ）</li>
+<li>KS-Studio</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>视觉分析和可视化</strong>
+<ul>
+<li>三个阶段：可视化→交互式可视化→可视化推理</li>
+<li>将数据转换成有效统计，代表性实例VTK。</li>
+<li>采取可视化的原因：数据太复杂或需要进一步处理。</li>
+<li>存在的问题，数据量过大难处理；大部分均为事后分析，难以实时分析；仅仅是单一设计，不能通用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>展望与结论：<br />
+  对大数据时代人工智能领域近期出现的若干理论和技术进展进行了综述，认为将数据驱动机器学习方法与人类的常识先验与隐式直觉有效结合，可以实现可解释、更鲁棒和更通用的人工智能。</li>
+</ul>
+<hr />
+<h3>AI 2.0时代的群体智能</h3>
+<ul>
+<li>
+<p>群智的定义</p>
+<ul>
+<li>
+<p>最重要的概念：<strong>collective intelligence</strong>，不同的人有不同的描述定义，最近的定义由Malone提出：</p>
+<blockquote>
+<p>groups of individuals acting collectively in ways that seem intelligent</p>
+</blockquote>
+</li>
+<li>
+作者的理解：
+<ul>
+<li>超越个人的智慧，群智由各个独立个体凝聚在一起解决具有挑战的计算任务。</li>
+<li>群智结合了人与机器的能力来解决问题。</li>
+</ul>
+</li>
+<li>
+其他相关概念
+<ul>
+<li>Social computing：运用社交软件支持社交互动和交流。</li>
+<li>Crowdsourcing：众包。</li>
+<li>Human computation（人本计算）：人能够解决但是电脑还不能解决的问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+代表性的群体智能平台
+<ul>
+<li>
+人本计算和微任务：
+<ul>
+<li>Crowd task:AMT平台，reCAPTCHA系统</li>
+<li>组织激励机制：金钱，志愿，享受，声誉</li>
+<li>解决问题流程：匿名，分解接取分治任务。</li>
+</ul>
+</li>
+<li>
+移动众包平台
+<ul>
+<li>Red Balloon Challenge（by DARPA）</li>
+<li>Participatory sensing</li>
+<li>组织激励机制：工作者认为更加自由报酬更加合适；发布者的动机在于成本效益和地理位置，信任等等。</li>
+<li>解决问题流程：简易来说通过相应平台审核，发布者和工作者从中发布接取任务，由平台进行相应整合与反馈。</li>
+</ul>
+</li>
+<li>
+公民科学平台
+<ul>
+<li>eBird，Galaxy Zoo，公民科学平台加快了科研进程和理论修订</li>
+</ul>
+</li>
+<li>
+众包软件开发
+<ul>
+<li>
+将软件开发部分分配给公众处理，但要保证：
+<ol>
+<li>刚性需求，即编程语言，逻辑等</li>
+<li>创意需求</li>
+<li>品质保证</li>
+</ol>
+</li>
+<li>
+组织激励机制：
+<ul>
+<li>开源(Github)</li>
+<li>众包（TopCoder）</li>
+</ul>
+</li>
+<li>解决问题流程：人员自主选择任务，根据需求建模封装，通过Twitter、博客等进行交流，通过Stackoverflow等进行讨论</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+群智研究的问题
+<ul>
+<li>
+效率问题：不同背景能力的人如何组合在一起
+<ul>
+<li>人员组织：分工明确</li>
+<li>人员治理：严格合理</li>
+</ul>
+</li>
+<li>
+激励机制问题：个人具有较高自主性与多样性，如何引导发挥出最好效果
+<ul>
+<li>
+货币驱动
+<ul>
+<li>拍卖理论的出现</li>
+<li>拍卖形式的出现（参考逆向拍卖，RA）</li>
+<li>以拍卖为基础的激励代表性研究</li>
+</ul>
+</li>
+<li>
+社会驱动
+<ul>
+<li>软件开发</li>
+<li>软件知识共享</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+质量品质控制：如何评估质量
+<ul>
+<li>
+数据处理：以低成本获取有用可靠数据
+<ul>
+<li>建立标签，监督模式</li>
+<li>设计智能的众包机制以降低预算</li>
+<li>理论保证</li>
+</ul>
+</li>
+<li>
+决策处理：信息是动态的，决策需要在开放环境中进行
+<ul>
+<li>风险控制</li>
+<li>选取一小部分的可靠信息源</li>
+<li>以可靠的信息源来做决策</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+群智创新:群智的开发其实就是一个创新的过程
+<ul>
+<li>在软件communities例如GitHub中的贡献聚集</li>
+<li>在以上之中的创新进化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+未来挑战
+<ul>
+<li>机制</li>
+<li>质量</li>
+<li>定价</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
