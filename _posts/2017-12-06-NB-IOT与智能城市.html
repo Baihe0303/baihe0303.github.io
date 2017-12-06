@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NB-IOT与智能城市汇报</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p><strong><a href="https://baihe0303.github.io/blog/">BLOG</a></strong></p>
+<h2>NB-IOT与智能城市</h2>
+<h3>什么是NB-IOT</h3>
+<ul>
+<li>
+物联网三层架构
+<ol>
+<li>感知层：RFID，传感器等基础设施</li>
+<li>网络层：利用协议将物体信息与终端相互传递</li>
+<li>应用层：将感知层得到的信息进行相应处理</li>
+</ol>
+</li>
+<li>
+低功率广域网（Low Power Wide Area Network，LPWAN）
+<ul>
+<li>低带宽，低功耗，远距离，大量连接的物联网通讯技术</li>
+<li>
+其工作在物联网网络层，可分为两类：
+<ul>
+<li>未授权频谱：LORA，SigFox</li>
+<li>授权频谱：NB-IOT，EC-GSM</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+LORA与NB-IOT
+<ul>
+<li>共同点：均是远距离、低功耗，很好的应用前景</li>
+<li>
+不同点：
+<ul>
+<li>LORA（Long Range）为Semtech公司采用和推广，采用的是民用免费ISM频段，成本更低但相应稳定性略逊一筹；NB-IOT(Narrow Band Internet of Things）由3GPP标准化组织定义，频段由运营商维护</li>
+<li>NB-IOT可基于现有蜂窝基站复用，以及更符合国情；LORA需要独立建网</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+发展背景
+<ul>
+<li>美好愿景：通过NB-IOT数十亿传感器与基于云的服务无缝连接，使效率打达到前所未有的水平</li>
+<li>诸多挑战：在某种程度上，NB-IOT也是4G向5G技术的拓展跳板</li>
+<li>行业标准：开放模式，从智能城市、农业、医疗、汽车到更传统的消费类设备和可穿戴式设备，有助于实现种类繁多的设备互连</li>
+</ul>
+</li>
+<li>
+发展历程
+<ul>
+<li>14年5月调试载波——16年12月一致性测试标准</li>
+<li>华为、高通等行业巨头不断推进技术发展</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3>NB-IOT的应用</h3>
+<ul>
+<li>
+NB-IOT适用场景
+<ul>
+<li>高速率——视频监控：光纤、3G/4G、Wi-Fi</li>
+<li>中速率——智能家居、POS机：3G/4G、蓝牙、Wi-Fi</li>
+<li>低速率——传感器、停车场、电气水表等：NB-IOT、非授权频谱等</li>
+<li>目前为止仍没有一个技术能很好的满足广域物联网应用需求</li>
+</ul>
+</li>
+<li>
+NB-IOT设想应用
+<ul>
+<li>
+智能井盖管理方案： 
+<ul>
+<li>通过高速率的数据传输、频繁的通信和低延迟。井盖管理部门需要对井盖网络进行实时监控以便发现隐患时及时处理，以及对于排污系统的管控。</li>
+</ul>
+</li>
+<li>
+停车管理系统：
+<ul>
+<li>从过去的人工收费到后来的无线局域网通讯，到目前通过简易的NB-IOT设备，减少网关汇聚，降低整体成本，安全可靠</li>
+</ul>
+</li>
+<li>
+垃圾回收系统：
+<ul>
+<li>通过NB-IOT在各个垃圾站传回的信息，服务器进行相应调配垃圾车进行处理，减少超负载空载从而减少燃料排放，节省垃圾回收时间</li>
+</ul>
+</li>
+<li>
+物品定位：
+<ul>
+<li>基于NB-IOT的GPS定位功能，可对特殊人群、野外活动、贵重物品、野生动物等进行跟踪定位，采集参数进行分析等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3>智慧城市的IOT案例</h3>
+<ul>
+<li>
+智能建筑
+<ul>
+<li>
+优化
+<ul>
+<li>
+提高整个建筑系统的效率：
+<ul>
+<li>通过从收集的数据中学习来降低管理，维护和效用成本，从而创造新的效率，例如自动关闭未使用的房间的热量。</li>
+</ul>
+</li>
+<li>
+提高人员满意度和生产力：
+<ul>
+<li>个性化和自动化建筑物的功能，照明，加热和冷却，房间利用率等，创造一个更舒适和高效的工作环境。</li>
+</ul>
+</li>
+<li>
+获得更好的控制:
+<ul>
+<li>将不同系统和使用信息连接并集成到一个中心视图中，以便更好地了解低效和问题，并获得洞察力以实现峰值优化。</li>
+</ul>
+</li>
+<li>
+对地球产生积极的影响:
+<ul>
+<li>通过优化供热和制冷，电力，水和其他公用事业和系统等资源的使用，降低能源消耗和成本，提高环境效益和更高的回报。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+实例
+<ul>
+<li>江森自控通过IOT以更加绿色的方式来管理建筑物，使用Azure IoT套件来提高建筑物空气处理和冷却系统的效率。</li>
+<li>施耐德电气将石油和天然气物联网解决方案从反应式转变为主动式，通过IOT可更直观的分析流量以及预测危险。</li>
+<li>瑞典公寓通过IOT监控各个住户的公共资源的使用消耗，从旧有的租户平均成本模式演变为一种消费较少，支付较少的模式。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+智能制造
+<ul>
+<li>
+优化
+<ul>
+<li>
+监控制造设备
+<ul>
+<li>使用工业物联网改善流程。使用传感器和高级分析预测零件需要维护，减少意外停机，缩短生产时间。</li>
+</ul>
+</li>
+<li>
+监控客户设备
+<ul>
+<li>创建新的商业模式，为您生产的设备提供预测性维护和性能监控，提供更丰富的客户体验。</li>
+</ul>
+</li>
+<li>
+改善现场服务
+<ul>
+<li>访问传感器数据以改善现场服务调度，确保在潜在问题成为主要问题之前，正确调配技术人员和工具。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+实例
+<ul>
+<li>Sandvik开发其服务模型，并提供预测分析解决方案，将供应链和制造过程的所有元素结合在一起，在“数字化制造”领域保持领先地位</li>
+<li>thyssenkrupp预测性维护其电梯功能来减少停机时间和成本，蒂森克虏伯将通过加强相应现场连接服务，进一步提升物联网解决方案的性能。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>智能运输</li>
+<li>智能零售</li>
+<li>智能医疗保健</li>
+</ul>
+<hr />
+<h3>NB-IOT的开发</h3>
+<ul>
+<li>
+端到端开发
+<ul>
+<li>NB-IOT模组获取</li>
+<li>IOT平台资源</li>
+<li>SoftRadio申请</li>
+</ul>
+</li>
+<li>
+SoftRadio
+<ul>
+<li>在没有芯片/模组、NB-IOT基站和核心网的情况下，借助SoftRadio通过互联网连接到IOT平台和应用服务器，用于设备到应用服务器端到端的基本功能调试</li>
+</ul>
+</li>
+<li>终端与服务器对接</li>
+</ul>
+<hr />
+<h3>智能城市与认知域</h3>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
