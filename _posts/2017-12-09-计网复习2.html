@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>计网复习2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p><strong><a href="https://baihe0303.github.io/blog/">BLOG</a></strong></p>
+<h1>计算机网络复习2</h1>
+<hr />
+<h3>网络体系结构</h3>
+<ul>
+<li>
+互联网协议设计目标
+<ul>
+<li>基本目标：连接不同网络</li>
+<li>二级目标：通讯持续性、多种服务、多类型网络、分布式管理等</li>
+<li>
+互联网是典型的非线性系统，首要原则：简单性设计原则
+<ul>
+<li>分层设计：简化但并不是最有效的</li>
+<li>最优化可能是有害的（不断扩充功能，增加相同重复性）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+面临挑战
+<ul>
+<li>早期是工程技术问题，现在是社会问题，安全问题凸显</li>
+<li>端到端的原则破坏，失去透明性（端到端的理论基础）</li>
+<li>名字空间不足</li>
+</ul>
+</li>
+<li>
+下一代研究
+<ul>
+<li>
+路线
+<ul>
+<li>革命式：NDN</li>
+<li>改良式：RSVP，IPsec</li>
+</ul>
+</li>
+<li>
+<strong>什么是互联网体系结构？其核心要素是什么？</strong>
+<ul>
+<li>关键要素：分组传送格式、转发方式、路由控制方式</li>
+</ul>
+</li>
+<li>
+近代研究
+<ul>
+<li>GENI：大规模实验集成环境</li>
+<li>FIND：未来互联网研究</li>
+<li>ICN：以地址为中心——以内容为中心，依靠内容ID进行路由转发</li>
+<li>XIA：高压互联网架构</li>
+<li>MobilityFirst：移动节点名字被统一映射成<strong>定长的无结构的GUID</strong></li>
+</ul>
+</li>
+<li>
+我们的研究
+<ul>
+<li>ADN：地址驱动网络</li>
+<li>RiNET：弹性智能网络（故障修复、异常检测、安全防护、自动配置），突出一个智能与自动</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3>网络交换技术</h3>
+<ol>
+<li>
+以太网交换技术
+<ul>
+<li>生成树、VLAN</li>
+<li>最小长度64字节</li>
+<li>性能难以保证</li>
+</ul>
+</li>
+<li>
+时间触发交换技术
+<ul>
+<li>所有设备时钟同步，按照时间调度分组，最具挑战</li>
+<li>透明时钟机制，固化时刻（不会接收固化后分组），固话时刻（分组对应关系）</li>
+<li>从而可以实现“全国列车时刻表”进行全局规划</li>
+</ul>
+</li>
+<li>
+OpenFlow交换技术
+<ul>
+<li>网络僵化需要改进</li>
+<li>
+Openflow交换机
+<ul>
+<li>Flow table</li>
+<li>交换机和外部控制器之间的安全通道</li>
+<li>Openflow协议</li>
+</ul>
+</li>
+<li>建立网络操作系统，通过在控制器上运行的App来实现网络管理，提供接口，配置规则</li>
+<li>思想：将路由，移动，名字/寻址，访问控制，管理和检测等作为网络的应用</li>
+</ul>
+</li>
+<li>
+SDN交换技术（软件定义网络）
+<ul>
+<li>开源：更多的人能对网络优化做出贡献</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3>数据中心网络技术</h3>
+<ol>
+<li>
+简介
+<ul>
+<li>用于存储数据</li>
+</ul>
+</li>
+<li>
+数据中心网络拓扑
+<ul>
+<li>
+数据中心架构
+<ul>
+<li>机架交换机</li>
+<li>汇聚交换机</li>
+<li>接入路由器</li>
+<li>核心路由器</li>
+<li>防火墙、负载均衡器</li>
+</ul>
+</li>
+<li>
+设计目标
+<ul>
+<li>高带宽</li>
+<li>性能隔离</li>
+<li>管理简单</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+现代数据中心网络体系架构
+<ul>
+<li>
+以交换机为中心
+<ul>
+<li>服务器通过1个端口连接网络</li>
+<li>互联和路由能力完全依靠交换机</li>
+<li>
+Fat-Tree, PortLand, VL2
+<ul>
+<li>Fat-Tree：服务器，边缘交换机，聚合交换机，核心交换机</li>
+<li>
+PortLand：可拓展的容错的2层数据中心网络架构
+<ul>
+<li>引入伪MAC地址PMAC，拓扑相关，层次式地址。寻址由交换机分配给服务器</li>
+<li>位置发现：启动时自己发现位置，相互交换信息</li>
+<li>名字解析：边缘交换机监听报告</li>
+<li>网络管理器：逻辑集中式，多宿主的服务器</li>
+</ul>
+</li>
+<li>
+VL2
+<ul>
+<li>核心层LA（公开）包括聚合交换机</li>
+<li>服务器层AA（私有），通过ToR和上层相连</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+服务器为中心
+<ul>
+<li>服务器通过多个端口连接网络</li>
+<li>服务器参与分组转发</li>
+<li>
+DCell, FiConn, BCube, MDCube, CamCube
+<ul>
+<li>
+DCell
+<ul>
+<li>使用小型交换机来支持扩展性</li>
+<li>
+将服务器作为路由基础设施的一部分
+<ul>
+<li>服务器有多个端口，需要用来转发报文</li>
+</ul>
+</li>
+<li>使用递归的方法来扩展和构建完整的拓扑， 来增加系统容量</li>
+</ul>
+</li>
+<li>
+Bcube
+<ul>
+<li>以服务器为中心的源路由</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+数据中心以太网机制
+<ul>
+<li>优先级流控PFC</li>
+<li>增强传输协议ETS</li>
+<li>带宽管理</li>
+<li>拥塞通告</li>
+<li>以太网光纤通道（FCoE）</li>
+<li>RDMA（远程内存直接访问） over Converged Ethernet（RoCE）</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3>网络智能管理技术</h3>
+<ol>
+<li>网络管理困难</li>
+<li>
+解决方案
+<ul>
+<li>SDN网络</li>
+<li>
+人工智能——构建知识平面KP
+<ul>
+<li>边缘参与</li>
+<li>全局视图</li>
+<li>可组合的结构</li>
+<li>统一的方法</li>
+<li>采用认知框架</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3>网络传输与拥塞控制技术</h3>
+<ol>
+<li>
+网络传输与拥塞控制原理
+<ul>
+<li>TCP</li>
+</ul>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
